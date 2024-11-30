@@ -21,7 +21,7 @@
 
 /* Hover for table rows when its on them  */
 tr:hover {
-    background-color: #f1f1f1f0; 
+    background-color: #f1f1f1; 
 }
 
 
@@ -68,11 +68,49 @@ tr:nth-child(odd) {
             </tr>
         </thead>
         
-        <tbody id= "data-body">
+        <tbody id= "Main Data">
    
         </tbody>
         
     </table>
     
+   <script>
+          //fitching the records of the students//
+
+    fetch('https://data.gov.bh/api/records/1.0/search/?dataset=01-statistics-of-students-nationalities_updated&rows=100&sort=number_of_students')
+        .then(response => response.json())
+            .then(data => { const tableBody = document.getElementById('Main Data');
+                
+                data.records.forEach(record=>{
+
+                    const row= document.createElement('tr');
+
+                    row.innerHTML=`
+
+                        <td>${record.fields.Year}</td>
+                        <td>${record.fields.Semester}</td>
+                        <td>${record.fields.The_Program}</td>
+                        <td>${record.fields.Nationality}</td>
+                        <td>${record.fields.Colleges}</td>
+                        <td>${record.fields.Number_of_Students}</td>
+                    `;
+
+                    tableBody.appendChild(row);
+                });
+
+            });
+
+    </script>
+
+
 </body>
 </html>
+
+
+
+
+
+  
+ 
+
+ 
