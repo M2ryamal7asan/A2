@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--responsive table design--> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--Pico css --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <title> UOB Student </title>
+
+    <style>
+
+/* table designe */
+    table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Hover for table rows when its on them  */
+tr:hover {
+    background-color: #f1f1f1f0; 
+}
+
+
+th {
+    background-color: white; 
+    color: #2b3035; 
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #c2c0bff1; 
+}
+
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #c2c0bf; 
+}
+
+
+tr:nth-child(even) {
+    background-color: white; 
+}
+
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2fa; 
+}
+
+</style>
+
+</head>
+
+  <body>
+
+  <!--creating the table--> 
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Semester</th>
+                <th>The Programs</th>
+                <th>Nationality</th>
+                <th>Colleges</th>
+                <th>Number of Students</th>
+            </tr>
+        </thead>
+        
+        <tbody id= "data-body">
+   
+        </tbody>
+        
+    </table>
+    
+</body>
+</html>
