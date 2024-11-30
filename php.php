@@ -14,6 +14,7 @@ if (!$Sdata|| !isset($Sdata["results"])){
 }
 
 $records = $Sdata["results"];
+print_r($records)
 
 //having the info for the students //
    foreach($records as $student){
